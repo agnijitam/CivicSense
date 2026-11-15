@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: #262626;
+  }
+  body {
+    background-color: #000000;
+    color: #F5F5F5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: #F97316;
+    color: #FFFFFF;
+  }
+}
+
+/* Instagram-style Dark Mode Leaflet Map */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: 10;
+  background: #121212 !important;
+  font-family: inherit;
+}
+
+/* Beautiful dark inverted map filter for standard OpenStreetMap tiles */
+.dark-leaflet-map .leaflet-tile-pane {
+  filter: brightness(0.65) invert(1) contrast(1.4) hue-rotate(200deg) saturate(0.3);
+}
+
+/* Custom Marker Styling */
+.custom-civic-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Custom Leaflet popup override for dark mode */
+.leaflet-popup-content-wrapper {
+  background: #181818 !important;
+  color: #F5F5F5 !important;
+  border-radius: 1rem !important;
+  border: 1px solid #363636 !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 10px !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: #181818 !important;
+  border: 1px solid #363636 !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #363636;
+}
